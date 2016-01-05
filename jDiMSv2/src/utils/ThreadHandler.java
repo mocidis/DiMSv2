@@ -21,7 +21,11 @@ public class ThreadHandler {
 				center.reloadLeft(newLeft);
 			}
 			else if(message.equals("update")){
+<<<<<<< HEAD
 				Thread.sleep(1500);
+=======
+				Thread.sleep(1000);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 				DIMS myApp = DIMS.getInstance();
 				UpdateWholeSystem updater = new UpdateWholeSystem();
 				updater.update(myApp);

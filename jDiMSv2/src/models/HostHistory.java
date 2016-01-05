@@ -6,6 +6,7 @@ import utils.DIMS;
 
 public class HostHistory {
 	
+<<<<<<< HEAD
 	private String [][] host_object_id;
 	
 	private String [][] state;
@@ -19,6 +20,21 @@ public class HostHistory {
 	private String [][] output;
 	
 	private boolean [] has_history;
+=======
+	public String [][] host_object_id;
+	
+	public String [][] state;
+	
+	public String [][] state_time;
+	
+	public String [][] display_name;
+	
+	public String [][] check_attempt;
+	
+	public String [][] output;
+	
+	public boolean [] has_history;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	
 	public HostHistory() throws SQLException{
 		String [] hosts = DIMS.getInstance().getHostPage().getHostId();
@@ -64,6 +80,7 @@ public class HostHistory {
 			}
 		}
 	}
+<<<<<<< HEAD
 	
 	public String [][] getHostObjectId() {
 		return host_object_id;
@@ -92,4 +109,6 @@ public class HostHistory {
 	public boolean [] hasHistory() {
 		return has_history;
 	}
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 }

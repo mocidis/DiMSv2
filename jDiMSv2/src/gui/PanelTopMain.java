@@ -4,17 +4,24 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+<<<<<<< HEAD
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.sql.SQLException;
 
 import javax.swing.BorderFactory;
+=======
+import java.awt.Image;
+import java.sql.SQLException;
+
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+<<<<<<< HEAD
 import events.MouseCheckCore;
 import utils.ColorBG;
 import utils.DIMS;
@@ -27,11 +34,23 @@ public class PanelTopMain extends PanelTop {
 	private int height = (int)(0.104*ScreenSpecification.MONITOR_HEIGHT);
 	private JPanel coreStatusBorder;
 	private MouseCheckCore listener = new MouseCheckCore();
+=======
+import utils.ColorBG;
+import utils.ShowHostGroups;
+import utils.SubDimension;
+
+public class PanelTopMain extends PanelTop {
+	private Dimension logo = new Dimension(196, 80);
+	private int height = 80;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	public PanelTopMain() throws SQLException {
 		this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
 		this.setPreferredSize(new Dimension(JFrame.MAXIMIZED_HORIZ, height));
 		this.setBackground(Color.decode(ColorBG.TOP_BACKGROUND));
+<<<<<<< HEAD
 		DIMS.getInstance().setTopMain(this);
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		
 		JPanel logoPart = new JPanel(new BorderLayout());
 		logoPart.setBackground(Color.decode(ColorBG.TOP_BACKGROUND));
@@ -46,6 +65,7 @@ public class PanelTopMain extends PanelTop {
 		JPanel menuSite = groups.getMenuSite();
 		menuSitePart.add(menuSite, BorderLayout.LINE_START);
 		
+<<<<<<< HEAD
 		coreStatusBorder = this.drawCoreBorder();
 		this.add(logoPart);
 		this.add(menuSitePart);
@@ -95,5 +115,9 @@ public class PanelTopMain extends PanelTop {
 		coreBox.add(statusBorder, BorderLayout.CENTER);
 		coreBorder.add(coreBox, BorderLayout.PAGE_END);
 		return coreBorder;
+=======
+		this.add(logoPart);
+		this.add(menuSitePart);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	}
 }

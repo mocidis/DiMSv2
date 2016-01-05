@@ -16,7 +16,10 @@ import events.MouseMenuRight;
 import utils.ColorBG;
 import utils.DIMS;
 import utils.LabelIcon;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 
 public class PanelMenuRight extends JPanel{
 	
@@ -29,16 +32,28 @@ public class PanelMenuRight extends JPanel{
 	
 	private JPanel hostRight, servicesRight, historyRight;
 	private JLabel rHost, rService, rHistory;
+<<<<<<< HEAD
 	private Dimension selectedTab = new Dimension((int)(0.08*ScreenSpecification.MONITOR_WIDTH), (int)(0.09*ScreenSpecification.MONITOR_HEIGHT));
 	private Dimension normalTab = new Dimension((int)(0.022*ScreenSpecification.MONITOR_WIDTH), (int)(0.09*ScreenSpecification.MONITOR_HEIGHT));
+=======
+	private Dimension selectedTab = new Dimension(110, 70);
+	private Dimension normalTab = new Dimension(30, 70);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	public PanelMenuRight() throws SQLException {
 		DIMS.getInstance().setMenuRight(this);
 		
 		this.setLayout(new FlowLayout(FlowLayout.LEFT));
+<<<<<<< HEAD
 		this.setPreferredSize(new Dimension((int)(0.088*ScreenSpecification.MONITOR_WIDTH), (int)(0.846*ScreenSpecification.MONITOR_HEIGHT)));
 		this.setMaximumSize(this.getPreferredSize());
 		this.setBackground(Color.decode(ColorBG.BACKGROUND));
 
+=======
+		this.setPreferredSize(new Dimension(120, 650));
+		this.setMaximumSize(this.getPreferredSize());
+		this.setBackground(Color.decode(ColorBG.BACKGROUND));
+		
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		//Fix position to right
 		JPanel fix = new JPanel();
 		fix.setLayout(new BoxLayout(fix, BoxLayout.Y_AXIS));

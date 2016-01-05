@@ -24,13 +24,29 @@ public class ShowServicePage extends PanelMainDetailContent {
 	private MouseServicePage listener = new MouseServicePage();
 	
 	public ShowServicePage() throws SQLException{
+<<<<<<< HEAD
 		DIMS.getInstance().getMenuRight().focusTo(ScreenSpecification.SERVICE_TAB);
+=======
+		DIMS.getInstance().getMenuRight().focusTo(ScreenIndex.SERVICE_TAB);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	}
 	
 	@Override
 	public JPanel createContent(int service_object_id) throws SQLException{
 		//Retrieve data
+<<<<<<< HEAD
 		int position = FindPosition.toService(service_object_id);
+=======
+		int position = 0;
+		RetrieveData picker = DIMS.getInstance().getPicker();
+		String [] servicesId = DIMS.getInstance().getServicePage().getServicesId();
+		for(int i = 0; i < servicesId.length; i++){
+			if(Integer.parseInt(servicesId[i]) == service_object_id) {
+				position = i;
+				break;
+			}
+		}
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		
 		String [] partOneData = DIMS.getInstance().getServicePage().getPartOne(position);
 		String partTwoData = DIMS.getInstance().getServicePage().getPartTwo(position);

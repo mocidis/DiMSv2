@@ -12,12 +12,20 @@ import javax.swing.JPanel;
 
 import utils.ColorBG;
 import utils.DIMS;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
 
 public class PanelMenuLeftSpace extends JPanel{
 	private Dimension text = new Dimension((int)(0.146*ScreenSpecification.MONITOR_WIDTH), (int)(0.065*ScreenSpecification.MONITOR_HEIGHT));
 	private Dimension icon = new Dimension((int)(0.011*ScreenSpecification.MONITOR_WIDTH), (int)(0.02*ScreenSpecification.MONITOR_HEIGHT));
 	private Dimension title = new Dimension((int)(0.011*ScreenSpecification.MONITOR_WIDTH), (int)(0.04*ScreenSpecification.MONITOR_HEIGHT));
+=======
+
+public class PanelMenuLeftSpace extends JPanel{
+	private Dimension text = new Dimension(200, 50);
+	private Dimension icon = new Dimension(15, 15);
+	private Dimension title = new Dimension(200, 30);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	public PanelMenuLeftSpace() {
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		this.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.GRAY));

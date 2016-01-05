@@ -21,6 +21,7 @@ public class ShowMainMenuWithoutSearch extends JPanel{
 	 */
 	private static final long serialVersionUID = 1L;
 	private MouseMenuLeft listener = new MouseMenuLeft();
+<<<<<<< HEAD
 	private int iconWidth = (int)(0.011*ScreenSpecification.MONITOR_WIDTH);
 	private int iconHeight = (int)(0.0195*ScreenSpecification.MONITOR_HEIGHT);
 	private int errorWidth = (int)(0.018*ScreenSpecification.MONITOR_WIDTH);
@@ -28,6 +29,15 @@ public class ShowMainMenuWithoutSearch extends JPanel{
 	public ShowMainMenuWithoutSearch() throws SQLException{
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		this.setPreferredSize(new Dimension((int)(0.1435*ScreenSpecification.MONITOR_WIDTH), JFrame.MAXIMIZED_VERT));
+=======
+	private int iconWidth = 15;
+	private int iconHeight = 15;
+	private int errorWidth = 25;
+	private int errorHeight = 20;
+	public ShowMainMenuWithoutSearch() throws SQLException{
+		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		this.setPreferredSize(new Dimension(196, JFrame.MAXIMIZED_VERT));
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		
 		JPanel monitoring = new PanelMenuLeftComponent();
 		monitoring.setBackground(Color.decode(ColorBG.BACKGROUND));
@@ -37,7 +47,11 @@ public class ShowMainMenuWithoutSearch extends JPanel{
 		error.setMaximumSize(error.getPreferredSize());
 		error.setBackground(Color.decode(ColorBG.CRITICAL));
 		error.setOpaque(true);
+<<<<<<< HEAD
 		String mountOfError = DIMS.getInstance().getServicesMatrix().getError();
+=======
+		String mountOfError = DIMS.getInstance().getServicesMatrix().numberError;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		JLabel number_error = new JLabel(mountOfError);
 		number_error.setForeground(Color.decode(ColorBG.BACKGROUND));
 		error.add(number_error);

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>HiMS</name>
+=======
+	<name>jDIMSv2</name>
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	<comment></comment>
 	<projects>
 	</projects>

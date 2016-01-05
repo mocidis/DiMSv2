@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import events.MouseAdminSubMenu;
 import utils.ColorBG;
 import utils.LabelIcon;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
 
 public class PanelAdminSubMenu extends JPanel{
@@ -21,6 +22,16 @@ public class PanelAdminSubMenu extends JPanel{
 	private int height = (int)(0.068*ScreenSpecification.MONITOR_HEIGHT);
 	private Dimension SUB_MENU = new Dimension(width, (int)(0.033*ScreenSpecification.MONITOR_HEIGHT));
 	private int iconSize = (int)(0.017*ScreenSpecification.MONITOR_HEIGHT);
+=======
+
+public class PanelAdminSubMenu extends JPanel{
+	private Dimension SUB_MENU = new Dimension(200, 25);
+	private MouseAdminSubMenu listener = new MouseAdminSubMenu();
+	private int width = 200;
+	private int height = 52;
+	private int iconWidth = 13;
+	private int iconHeight = 13;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	public PanelAdminSubMenu(){
 		this.setLayout(new BorderLayout());
 		this.setPreferredSize(new Dimension(width, height));
@@ -32,7 +43,11 @@ public class PanelAdminSubMenu extends JPanel{
 		changePassPanel.setMaximumSize(changePassPanel.getPreferredSize());
 		changePassPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 1, Color.GRAY));
 		changePassPanel.setBackground(Color.decode(ColorBG.SUBMENU));
+<<<<<<< HEAD
 		JLabel changePassIcon = new LabelIcon("changepass.png", iconSize, iconSize); 
+=======
+		JLabel changePassIcon = new LabelIcon("changepass.png", iconWidth, iconHeight); 
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		changePassIcon.setText("Change password");
 		changePassIcon.setName("changepassword");
 		changePassIcon.addMouseListener(listener);
@@ -46,7 +61,11 @@ public class PanelAdminSubMenu extends JPanel{
 		logoutPanel.setMaximumSize(logoutPanel.getPreferredSize());
 		logoutPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 1, Color.GRAY));
 		logoutPanel.setBackground(Color.decode(ColorBG.SUBMENU));
+<<<<<<< HEAD
 		JLabel logoutIcon = new LabelIcon("logout.png", iconSize, iconSize);
+=======
+		JLabel logoutIcon = new LabelIcon("logout.png", iconWidth, iconHeight);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		logoutIcon.setText("Logout");
 		logoutIcon.setName("logout");
 		logoutIcon.addMouseListener(listener);

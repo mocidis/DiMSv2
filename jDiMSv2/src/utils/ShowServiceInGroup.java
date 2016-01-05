@@ -10,6 +10,7 @@ public class ShowServiceInGroup extends PanelMainDetailContent{
 	
 	@Override
 	public JPanel createContent(int sgroup_object_id) throws SQLException{
+<<<<<<< HEAD
 		int position = FindPosition.toServiceInGroup(sgroup_object_id);
 		int rowSize = DIMS.getInstance().getServiceInGroup().getName()[position].length;
 		String [][] data = new String [rowSize][7];
@@ -24,6 +25,10 @@ public class ShowServiceInGroup extends PanelMainDetailContent{
 		}
 		DIMS.getInstance().setCurrentData(data);
 		int [] countData = Classification.stateToService(data, 1);
+=======
+		String [][] data = DIMS.getInstance().getPicker().getServiceInGroup(sgroup_object_id);
+		int [] countData = DIMS.getInstance().getPicker().countConfiguredServiceInGroup(sgroup_object_id);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		
 		//Box contains panels
 		JPanel boxbox = new ReachServices(data, countData, data[0][6]);

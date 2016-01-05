@@ -13,7 +13,11 @@ import gui.FrameNotification;
 import gui.PanelMainContent;
 import utils.ColorBG;
 import utils.DIMS;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
+=======
+import utils.ScreenIndex;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 import utils.TextLabelStyle;
 
 public class MouseMenuLeft implements MouseListener{
@@ -43,9 +47,15 @@ public class MouseMenuLeft implements MouseListener{
 		menuPanel[current_menu].setBackground(Color.decode(ColorBG.BACKGROUND));
 		if(current_menu == 0) {
 			try{
+<<<<<<< HEAD
 				PanelMainContent newCenter = new PanelMainContent(ScreenSpecification.MATRIX);
 				DIMS.getInstance().getCenterMain().reloadCenter(newCenter);
 				DIMS.getInstance().setCurrentObjectID(ScreenSpecification.MATRIX);
+=======
+				PanelMainContent newCenter = new PanelMainContent(ScreenIndex.MATRIX);
+				DIMS.getInstance().getCenterMain().reloadCenter(newCenter);
+				DIMS.getInstance().setCurrentObjectID(ScreenIndex.MATRIX);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 			}catch(SQLException e1){ 
 				new FrameNotification("Maybe something went wrong when you were trying to open something from menu on the left<br>" +e1.getMessage());
 			} 

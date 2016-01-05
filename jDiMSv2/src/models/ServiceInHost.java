@@ -7,6 +7,7 @@ import utils.RetrieveData;
 
 public class ServiceInHost {
 
+<<<<<<< HEAD
 	private String [][] service_object_id;
 
 	private String [][] state;
@@ -22,6 +23,24 @@ public class ServiceInHost {
 	public ServiceInHost() throws SQLException {
 		RetrieveData picker = DIMS.getInstance().getPicker();
 		String [][] Host = DIMS.getInstance().getHostInGroup().getHostObjectId();
+=======
+	public String [][] service_object_id;
+
+	public String [][] state;
+
+	public String [][] since;
+
+	public String [][] serviceName;
+
+	public String [][] alias;
+
+	public String [][] output;
+
+
+	public ServiceInHost() throws SQLException {
+		RetrieveData picker = DIMS.getInstance().getPicker();
+		String [][] Host = DIMS.getInstance().getHostInGroup().host_object_id;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		int rowSize = 0;
 		for (int i = 0; i < Host.length; i++) {
 			rowSize += Host[i].length;
@@ -64,6 +83,7 @@ public class ServiceInHost {
 			}
 		}
 	}
+<<<<<<< HEAD
 	
 	public String [][] getServiceObjectId() {
 		return service_object_id;
@@ -88,4 +108,6 @@ public class ServiceInHost {
 	public String [][] getAlias() {
 		return alias;
 	}
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 }

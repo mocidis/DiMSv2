@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+<<<<<<< HEAD
 	<classpathentry kind="src" path="icon"/>
 	<classpathentry kind="src" path="src"/>
+=======
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="icon"/>
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	<classpathentry kind="src" path="library"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="library/jxlayer-3.0.4.jar"/>
 	<classpathentry kind="lib" path="library/mysql-connector-java-5.1.36.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="library/postgresql-9.4-1205.jdbc4.jar"/>
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	<classpathentry kind="lib" path="library/swingx-all-1.6.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

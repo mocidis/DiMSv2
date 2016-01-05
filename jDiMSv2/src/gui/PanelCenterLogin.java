@@ -19,6 +19,7 @@ import org.jdesktop.swingx.prompt.PromptSupport;
 
 import events.ActionCenterLogin;
 import utils.ColorBG;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
 
 public class PanelCenterLogin extends PanelCenter {
@@ -34,6 +35,22 @@ public class PanelCenterLogin extends PanelCenter {
 	public PanelCenterLogin() {
 		this.setLayout(new BorderLayout());
 		this.setPreferredSize(new Dimension((int)(ScreenSpecification.MONITOR_WIDTH), height));
+=======
+
+public class PanelCenterLogin extends PanelCenter {
+	private ActionCenterLogin SubmitListener = new ActionCenterLogin();
+	private int titleSize = 15; 
+	private String titleStyle = "Arial";
+	private String titleText = "DiCOM Monitoring System";
+	private Dimension form = new Dimension(400, 200);
+	private int field_width = 20;
+	private Dimension submit = new Dimension(223, 20);
+	private double height = 0.5;
+	private String defaultAccount = "admin";
+	public PanelCenterLogin() {
+		this.setLayout(new BorderLayout());
+		this.setPreferredSize(new Dimension(JFrame.MAXIMIZED_HORIZ, (int) ((int)JFrame.MAXIMIZED_VERT*height)));
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		this.setBackground(Color.decode(ColorBG.BACKGROUND));
 		
 		JLabel error = new JLabel(" "); //Bao loi dang nhap

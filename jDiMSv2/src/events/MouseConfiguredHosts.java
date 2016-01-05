@@ -25,7 +25,11 @@ public class MouseConfiguredHosts implements MouseListener{
 			if(Integer.parseInt(now.getText()) > 0 ){
 					DIMS.getInstance().setState(Integer.parseInt(now.getName()));
 					PanelCenterMain CenterMain = DIMS.getInstance().getCenterMain();
+<<<<<<< HEAD
 					PanelMainContent newCenter = new ShowHostByStateInGroup(DIMS.getInstance().getCurrentOID(), now.getName(), now.getText());
+=======
+					PanelMainContent newCenter = new ShowHostByStateInGroup(DIMS.getInstance().getCurrentOID());
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 					CenterMain.reloadCenter(newCenter);
 			}
 		}

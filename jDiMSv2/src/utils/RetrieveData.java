@@ -148,10 +148,17 @@ public class RetrieveData {
 		while(rss.next()){
 			total = rss.getInt("sum");
 		}
+<<<<<<< HEAD
 		data = new String [total][7]; 
 		rss.close();
 		
 		sql = "select ihg.alias as group_name, ih.host_object_id, ihs.output, ihs.current_state, ihs.last_state_change, ih.display_name, ih.alias "
+=======
+		data = new String [total][6]; 
+		rss.close();
+		
+		sql = "select ih.host_object_id, ihs.output, ihs.current_state, ihs.last_state_change, ih.display_name, ih.alias "
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 				+ "from icinga_hoststatus ihs join icinga_hosts ih on ihs.host_object_id = ih.host_object_id "
 				+ "join icinga_hostgroup_members ihm on ih.host_object_id = ihm.host_object_id "
 				+ "join icinga_hostgroups ihg on ihm.hostgroup_id = ihg.hostgroup_id where ihg.hostgroup_object_id = "+hostgroup_object_id;
@@ -176,9 +183,12 @@ public class RetrieveData {
 			column++;
 			String output = rss.getString("output");
 			data[row][column] = output;
+<<<<<<< HEAD
 			column++;
 			String hostgroup = rss.getString("group_name");
 			data[row][column] = hostgroup;
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 			row++;
 			column = 0;
 		}
@@ -452,7 +462,10 @@ public class RetrieveData {
 		while(rs.next()) totalSize++;
 		rs.close();
 		int sizeExtended = (totalSize-1)*2;
+<<<<<<< HEAD
 		if(sizeExtended < 0) sizeExtended = 0;
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		String data [] = new String[9+sizeExtended];
 		//Query
 		rs = connector.Query(sql);
@@ -679,7 +692,11 @@ public class RetrieveData {
 	}
 	
 	
+<<<<<<< HEAD
 	public String [][] getServiceInGroup(int sgroup_object_id) throws SQLException {
+=======
+	public String [][] getServiceInGroup(int sgroup_object_id) throws SQLException{
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		DBConnection connector = DIMS.getInstance().getConnector();
 		String [][] data = null;
 		String sql = "select isg.alias, isv.service_object_id, isv.display_name, io.name2, iss.current_state, iss.last_state_change, iss.output "

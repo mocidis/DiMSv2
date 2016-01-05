@@ -10,10 +10,13 @@ import javax.swing.JPanel;
 import events.MouseConfiguredHosts;
 
 public class ConfiguredHosts extends JPanel{
+<<<<<<< HEAD
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	private MouseConfiguredHosts listener = new MouseConfiguredHosts();
 	
 	public ConfiguredHosts(int [] data){

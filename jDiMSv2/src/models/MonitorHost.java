@@ -40,7 +40,11 @@ public class MonitorHost {
 	//Object [] components = {state, since, output, display_name, alias, check_source, is_reachable, host_group, last_check, next_check, check_attempts, check_execution_time, statistic_service};
 	
 	public MonitorHost() throws SQLException{
+<<<<<<< HEAD
 		String [][] hosts = DIMS.getInstance().getHostInGroup().getHostObjectId();
+=======
+		String [][] hosts = DIMS.getInstance().getHostInGroup().host_object_id;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		int totalHost = 0;
 		for(int i = 0; i < hosts.length; i++) totalHost += hosts[i].length;
 		

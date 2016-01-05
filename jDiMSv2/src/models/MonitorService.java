@@ -49,7 +49,11 @@ public class MonitorService {
 	private String [] servicegroup2_object_id;
 	
 	public MonitorService() throws SQLException{
+<<<<<<< HEAD
 		String [][] services = DIMS.getInstance().getServiceInHost().getServiceObjectId();
+=======
+		String [][] services = DIMS.getInstance().getServiceInHost().service_object_id;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		int totalService = 0;
 		for(int i = 0; i < services.length; i++) totalService += services[i].length;
 		
@@ -78,10 +82,19 @@ public class MonitorService {
 		int position = 0;
 		RetrieveData picker = DIMS.getInstance().getPicker();
 		for(int i = 0; i < services.length; i++){
+<<<<<<< HEAD
 			for(int j = 0; j < services[i].length; j++) {
 				String [] data1 = picker.getDetailServicePartOne(Integer.valueOf(services[i][j]));
 				String data2 = picker.getDetailServicePartTwo(Integer.valueOf(services[i][j]));
 				String [] data3 = picker.getDetailServicePartThree(Integer.valueOf(services[i][j]));
+=======
+			for(int j = 0; j < services[i].length; j++){
+				
+				String [] data1 = picker.getDetailServicePartOne(Integer.valueOf(services[i][j]));
+				String data2 = picker.getDetailServicePartTwo(Integer.valueOf(services[i][j]));
+				String [] data3 = picker.getDetailServicePartThree(Integer.valueOf(services[i][j]));
+				
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 				service_object_id[position] = data1[0];
 				host_object_id[position] = data1[1];
 				state[position] = data1[2];
@@ -99,7 +112,11 @@ public class MonitorService {
 				is_reachable[position] = data3[2];
 				serviceGroup1[position] = data3[3];
 				servicegroup1_object_id[position] = data3[4];
+<<<<<<< HEAD
 				if(data3.length > 9){
+=======
+				if(data3.length > 8){
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 					serviceGroup2[position] = data3[9];
 					servicegroup2_object_id[position] = data3[10];
 				}

@@ -13,7 +13,11 @@
 	</path>
 	<target name="build">
 		<mkdir dir="${build.dir}"/>
+<<<<<<< HEAD
 		<javac destdir="${build.dir}" source="1.8.0_65" target="1.8.0_65" deprecation="false" optimize="false" failonerror="true">
+=======
+		<javac destdir="${build.dir}" source="1.7" target="1.7" deprecation="false" optimize="false" failonerror="true">
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 			<src path="${src.dir}"/>
 			<classpath refid="library"/>
 		</javac>
@@ -29,7 +33,10 @@
             <zipfileset excludes="META-INF/*.SF" src="${lib.dir}/jxlayer-3.0.4.jar"/>
             <zipfileset excludes="META-INF/*.SF" src="${lib.dir}/mysql-connector-java-5.1.36.jar"/>
             <zipfileset excludes="META-INF/*.SF" src="${lib.dir}/swingx-all-1.6.3.jar"/>
+<<<<<<< HEAD
 		 	<zipfileset excludes="META-INF/*.SF" src="${lib.dir}/postgresql-9.4-1205.jdbc4"/>
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		</jar>
 	</target>
 	<target name="clean">
@@ -42,4 +49,8 @@
 			</fileset>
       		</delete>
 	</target>
+<<<<<<< HEAD
 </project>
+=======
+</project>
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d

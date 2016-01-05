@@ -17,8 +17,13 @@ import gui.PanelMainDetailContent;
 public class ShowHostHistory extends PanelMainDetailContent{
 	private int position = 0;
 	private void setPosition(int host_object_id) throws SQLException{
+<<<<<<< HEAD
 		for(int i = 0; i < DIMS.getInstance().getHostHistory().getHostObjectId().length; i++){
 			if(host_object_id == Integer.parseInt(DIMS.getInstance().getHostHistory().getHostObjectId()[i][0])) {
+=======
+		for(int i = 0; i < DIMS.getInstance().getHostHistory().host_object_id.length; i++){
+			if(host_object_id == Integer.parseInt(DIMS.getInstance().getHostHistory().host_object_id[i][0])) {
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 				position = i;
 				break;
 			}
@@ -28,6 +33,7 @@ public class ShowHostHistory extends PanelMainDetailContent{
 	@Override
 	public JPanel createContent(int host_object_id) throws SQLException{
 		setPosition(host_object_id);
+<<<<<<< HEAD
 		if(DIMS.getInstance().getHostHistory().hasHistory()[position]){
 			int RowSize = DIMS.getInstance().getHostHistory().getHostObjectId()[position].length;
 			String [][] data = new String [RowSize][6];
@@ -38,6 +44,18 @@ public class ShowHostHistory extends PanelMainDetailContent{
 				data[col][3] = DIMS.getInstance().getHostHistory().getName()[position][col];
 				data[col][4] = DIMS.getInstance().getHostHistory().getAttempt()[position][col];
 				data[col][5] = DIMS.getInstance().getHostHistory().getMessage()[position][col];
+=======
+		if(DIMS.getInstance().getHostHistory().has_history[position]){
+			int RowSize = DIMS.getInstance().getHostHistory().host_object_id[position].length;
+			String [][] data = new String [RowSize][6];
+			for(int col = 0; col < RowSize; col++){
+				data[col][0] = DIMS.getInstance().getHostHistory().host_object_id[position][col];
+				data[col][1] = DIMS.getInstance().getHostHistory().state[position][col];
+				data[col][2] = DIMS.getInstance().getHostHistory().state_time[position][col];
+				data[col][3] = DIMS.getInstance().getHostHistory().display_name[position][col];
+				data[col][4] = DIMS.getInstance().getHostHistory().check_attempt[position][col];
+				data[col][5] = DIMS.getInstance().getHostHistory().output[position][col];
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 			}
 			JPanel boxbox = History.Draw(data);
 			return boxbox;
@@ -57,17 +75,30 @@ public class ShowHostHistory extends PanelMainDetailContent{
 			title.add(titleLabel);
 			
 			//Where are u?
+<<<<<<< HEAD
 			int place = 0;
 			for(int i = 0; i < DIMS.getInstance().getHostPage().getHostId().length; i++){
 				if(host_object_id == Integer.parseInt(DIMS.getInstance().getServicePage().getServicesId()[i])){
 					place = i;
+=======
+			int where = 0;
+			for(int i = 0; i < DIMS.getInstance().getHostPage().getHostId().length; i++){
+				if(host_object_id == Integer.parseInt(DIMS.getInstance().getServicePage().getServicesId()[i])){
+					where = i;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 					break;
 				}
 					
 			}
+<<<<<<< HEAD
 			JPanel placeBox = new PageTitle(DIMS.getInstance().getServicePage().getPartOne(place)[4], title);
 			
 			titleContainer.add(placeBox);
+=======
+			JPanel place = new PageTitle(DIMS.getInstance().getServicePage().getPartOne(where)[3], title);
+			
+			titleContainer.add(place);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 			
 			JPanel messageContainer = new JPanel(new BorderLayout());
 			messageContainer.setBackground(Color.decode(ColorBG.BACKGROUND));

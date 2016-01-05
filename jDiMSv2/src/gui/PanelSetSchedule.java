@@ -14,15 +14,25 @@ import javax.swing.JTextField;
 
 import events.ActionSubmitSchedule;
 import utils.ColorBG;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 
 public class PanelSetSchedule extends JPanel{
 	private GridBagConstraints constraint;
 	private ActionSubmitSchedule listener = new ActionSubmitSchedule();
+<<<<<<< HEAD
 	private Dimension box = new Dimension((int)(0.22*ScreenSpecification.MONITOR_WIDTH), (int)(0.195*ScreenSpecification.MONITOR_HEIGHT));
 	private Dimension field = new Dimension((int)(0.033*ScreenSpecification.MONITOR_WIDTH), (int)(0.0325*ScreenSpecification.MONITOR_HEIGHT));
 	private Dimension button = new Dimension((int)(0.095*ScreenSpecification.MONITOR_WIDTH), (int)(0.04*ScreenSpecification.MONITOR_HEIGHT));
 	private int field_width = (int)(0.00878*ScreenSpecification.MONITOR_WIDTH);
+=======
+	private Dimension box = new Dimension(300, 150);
+	private Dimension field = new Dimension(45, 25);
+	private Dimension button = new Dimension(130, 30);
+	private int field_width = 12;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	public PanelSetSchedule(){
 		constraint = new GridBagConstraints();
 		

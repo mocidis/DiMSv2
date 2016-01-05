@@ -12,7 +12,10 @@ import gui.PanelMenuLeft;
 import gui.PanelMenuRight;
 import gui.PanelTop;
 import gui.PanelTopLogin;
+<<<<<<< HEAD
 import gui.PanelTopMain;
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 import models.Account;
 import models.HostGroups;
 import models.HostHistory;
@@ -21,9 +24,13 @@ import models.MonitorHost;
 import models.MonitorService;
 import models.ServiceGroups;
 import models.ServiceHistory;
+<<<<<<< HEAD
 import models.ServiceInGroup;
 import models.ServiceInHost;
 import models.ServiceInName;
+=======
+import models.ServiceInHost;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 import models.ServicesMatrix;
 
 public class DIMS {
@@ -38,20 +45,29 @@ public class DIMS {
 	private ServicesMatrix smt;
 	private HostInGroup hing;
 	private ServiceInHost sinh;
+<<<<<<< HEAD
 	private ServiceInGroup serviceInGroup;
 	private ServiceInName serviceInName;
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	private PanelCenterMain mainCenter;
 	private MonitorHost detailHost;
 	private MonitorService detailService;
 	private HostHistory hostHistory;
 	private ServiceHistory serviceHistory;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	private PanelMainDetailContent detailContent;
 	private ServiceGroups serviceGroup;
 	private PanelMenuLeft mainMenu;
 	private PanelMenuRight rightMenu;
 	private ShowHostGroups groupTabs;
+<<<<<<< HEAD
 	private PanelTopMain topMain;
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	
 	private Dimension screenSize;
 	private Dimension mainScreenSize;
@@ -62,7 +78,11 @@ public class DIMS {
 	private String currentHostName;
 	private String currentServiceName;
 	private String currentGroupTab;
+<<<<<<< HEAD
 	private String [][] currentData;
+=======
+	
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	//Configuarion
 	private String DBUsername;
 	private String DBPassword;
@@ -94,6 +114,7 @@ public class DIMS {
 	
 	
 	// ----------------- SET -----------------------------------
+<<<<<<< HEAD
 	public void setTopMain(PanelTopMain mainTop) {
 		topMain = mainTop;
 	}
@@ -101,6 +122,8 @@ public class DIMS {
 	public void setCurrentData(String [][] data) {
 		currentData = data;
 	}
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	public void setCoreStatus (String status) {
 		icinga2status = status;
 	}
@@ -172,6 +195,7 @@ public class DIMS {
 	public void setMainScreenSize(Dimension size) {
 		this.mainScreenSize= size;
 	}
+<<<<<<< HEAD
 	
 	// -------------------- GET ------------------------
 	public PanelTopMain getPanelTopMain() {
@@ -190,6 +214,9 @@ public class DIMS {
 		return currentData;
 	}
 	
+=======
+	// -------------------- GET ------------------------
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	public String getCoreStatus() {
 		return icinga2status;
 	}
@@ -312,8 +339,11 @@ public class DIMS {
 		hostHistory = new HostHistory();
 		serviceHistory = new ServiceHistory();
 		serviceGroup = new ServiceGroups();
+<<<<<<< HEAD
 		serviceInGroup = new ServiceInGroup();
 		serviceInName = new ServiceInName();
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	}
 	
 	public void showMainScreen() throws Exception {

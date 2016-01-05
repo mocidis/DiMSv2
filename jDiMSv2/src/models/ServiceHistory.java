@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import utils.DIMS;
 
 public class ServiceHistory {
+<<<<<<< HEAD
 	private String [][] service_object_id; 
 	
 	private String [][] state;
@@ -18,6 +19,21 @@ public class ServiceHistory {
 	private String [][] output;
 	
 	private boolean [] has_history;
+=======
+	public String [][] service_object_id; 
+	
+	public String [][] state;
+	
+	public String [][] state_time;
+	
+	public String [][] display_name;
+	
+	public String [][] check_attempt;
+	
+	public String [][] output;
+	
+	public boolean [] has_history;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	public ServiceHistory() throws SQLException{
 		String [] services = DIMS.getInstance().getServicePage().getServicesId();
 		int rowLength = services.length;
@@ -63,6 +79,7 @@ public class ServiceHistory {
 			}
 		}
 	}
+<<<<<<< HEAD
 	
 	public String [][] getServiceObjectId() {
 		return service_object_id;
@@ -91,4 +108,6 @@ public class ServiceHistory {
 	public boolean [] hasHistory() {
 		return has_history;
 	}
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 }

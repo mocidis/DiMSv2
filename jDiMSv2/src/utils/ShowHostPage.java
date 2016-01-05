@@ -26,7 +26,19 @@ public class ShowHostPage extends PanelMainDetailContent{
 	public JPanel createContent(int host_object_id) throws SQLException {
 
 		//Retrieve data
+<<<<<<< HEAD
 		int position = FindPosition.toHost(host_object_id);
+=======
+		int position = 0;
+		RetrieveData picker = DIMS.getInstance().getPicker();
+		String [] hosts = DIMS.getInstance().getHostPage().getHostId();
+		for(int i = 0; i < hosts.length; i++){
+			if(host_object_id == Integer.parseInt(hosts[i])){
+				position = i;
+				break;
+			}
+		}
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		
 		String [] partOneData = DIMS.getInstance().getHostPage().getPartOne(position);
 		String partTwoData = DIMS.getInstance().getHostPage().getPartTwo(position);

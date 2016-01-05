@@ -6,6 +6,7 @@ import utils.DIMS;
 import utils.RetrieveData;
 
 public class HostInGroup {
+<<<<<<< HEAD
 	private String [][] host_object_id;
 	
 	private String [][] state;
@@ -22,6 +23,23 @@ public class HostInGroup {
 	public HostInGroup() throws SQLException{
 		RetrieveData picker = DIMS.getInstance().getPicker();
 		String [][] hostGroup = DIMS.getInstance().getHostGroups().getHostGroup();
+=======
+	public String [][] host_object_id;
+	
+	public String [][] state;
+	
+	public String [][] since;
+	
+	public String [][] hostName;
+	
+	public String [][] output;
+	
+	public String [][] alias;
+	
+	public HostInGroup() throws SQLException{
+		RetrieveData picker = DIMS.getInstance().getPicker();
+		String [][] hostGroup = DIMS.getInstance().getHostGroups().HostGroups;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		int RowSize = hostGroup.length;
 		host_object_id = new String [RowSize][];
 		state = new String [RowSize][];
@@ -29,7 +47,10 @@ public class HostInGroup {
 		hostName = new String [RowSize][];
 		output = new String [RowSize][];
 		alias = new String [RowSize][];
+<<<<<<< HEAD
 		hostgroup = new String [RowSize][];
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		for(int row = 0; row < RowSize; row++)
 		{
 			int ColumnSize = picker.getHostsInGroup(Integer.parseInt(hostGroup[row][1])).length;
@@ -39,7 +60,10 @@ public class HostInGroup {
 			hostName[row] = new String [ColumnSize];
 			output[row] = new String [ColumnSize];
 			alias[row] = new String [ColumnSize];
+<<<<<<< HEAD
 			hostgroup[row] = new String [ColumnSize];
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		}
 		
 		for(int row = 0; row < RowSize; row++){
@@ -52,11 +76,15 @@ public class HostInGroup {
 				hostName[row][col] = data[col][3];
 				alias[row][col] = data[col][4];
 				output[row][col] = data[col][5];
+<<<<<<< HEAD
 				hostgroup[row][col] = data[col][6];
+=======
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 			}
 		}
 		
 	}
+<<<<<<< HEAD
 
 	public String [][] getHostObjectId() { 
 		return host_object_id;
@@ -88,3 +116,6 @@ public class HostInGroup {
 }
 
 
+=======
+}
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d

@@ -29,6 +29,7 @@ public class SocketListener {
 		if(maxThread > 12) maxThread = 12;
 	}
 	
+<<<<<<< HEAD
 	
 	public void start() throws Exception {
 		Timer timer = new Timer(miniSecondCycle, new ActionListener() {
@@ -36,6 +37,15 @@ public class SocketListener {
 			public void actionPerformed(ActionEvent arg0) {
 				currentThread = 0;
 			}
+=======
+	public void start() throws Exception {
+		Timer timer = new Timer(miniSecondCycle, new ActionListener() {
+		  @Override
+		  public void actionPerformed(ActionEvent arg0) {
+		    // Code to be executed
+			  currentThread = 0;
+		  }
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		});
 		timer.setRepeats(true); // Only execute once
 		timer.start();
@@ -57,8 +67,13 @@ public class SocketListener {
 	}
 	
 	public static void checkSystemCore() throws IOException{
+<<<<<<< HEAD
 		String prefixLink = new File(ExternalCommandPipe.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getParentFile().getParentFile().getPath() +"/scripts/"; //IDE
 //		String prefixLink = new File(ExternalCommandPipe.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getParentFile().getPath() +"/scripts/"; //JAR
+=======
+//		String prefixLink = new File(ExternalCommandPipe.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getParentFile().getParentFile().getPath() +"/scripts/"; //IDE
+		String prefixLink = new File(ExternalCommandPipe.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getParentFile().getPath() +"/scripts/"; //JAR
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		Runtime rt = Runtime.getRuntime();
 		String message = prefixLink +"uptime.sh";
 		rt.exec(message);

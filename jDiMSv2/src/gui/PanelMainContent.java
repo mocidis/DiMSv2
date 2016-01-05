@@ -9,7 +9,11 @@ import javax.swing.JPanel;
 
 import utils.ColorBG;
 import utils.IsHostGroup;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
+=======
+import utils.ScreenIndex;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 import utils.ShowHostInGroup;
 import utils.ShowMatrix;
 import utils.ShowServiceByName;
@@ -20,11 +24,19 @@ public class PanelMainContent extends JPanel {
 		this.setLayout(new BorderLayout());
 		this.setBackground(Color.decode(ColorBG.BACKGROUND));
 		this.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, Color.decode(ColorBG.BACKGROUND)));
+<<<<<<< HEAD
 		if(object_id == ScreenSpecification.CHANGEPASSWORD){
 			PanelChangePass changepass = new PanelChangePass();
 			this.add(changepass);
 		}
 		else if(object_id == ScreenSpecification.MATRIX){
+=======
+		if(object_id == ScreenIndex.CHANGEPASSWORD){
+			PanelChangePass changepass = new PanelChangePass();
+			this.add(changepass);
+		}
+		else if(object_id == ScreenIndex.MATRIX){
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 			ShowMatrix pencil = new ShowMatrix();
 			JPanel picture = pencil.Draw();
 			this.add(picture, BorderLayout.PAGE_START);

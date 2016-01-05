@@ -47,12 +47,18 @@ public class ActionSubmitSchedule implements ActionListener{
 				int hrs = Integer.parseInt(hour.getText());
 				int min = Integer.parseInt(minute.getText());
 				Date myTime = new Date(yr-1900, mth-1, days, hrs, min, 00);
+<<<<<<< HEAD
 				String strTime = String.valueOf(myTime.getTime());
 				strTime = strTime.substring(0, 10);
 				
 				String WantedDate = year.getText()+"-"+month.getText()+"-"+day.getText()+" "+hour.getText()+":"+minute.getText()+":00";
 				if(IsHost.check(DIMS.getInstance().getCurrentOID())){
 					ExternalCommandPipe.rescheduleHost(DIMS.getInstance().getCurrentHostName(), strTime);
+=======
+				String WantedDate = year.getText()+"-"+month.getText()+"-"+day.getText()+" "+hour.getText()+":"+minute.getText()+":00";
+				if(IsHost.check(DIMS.getInstance().getCurrentOID())){
+					ExternalCommandPipe.rescheduleHost(DIMS.getInstance().getCurrentHostName(), myTime.getTime());
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 					
 					UpdateData.updateHostSchedule(DIMS.getInstance().getCurrentOID(), WantedDate);
 					DIMS myApp = DIMS.getInstance();
@@ -60,7 +66,11 @@ public class ActionSubmitSchedule implements ActionListener{
 					updater.update(myApp);
 				}
 				else{
+<<<<<<< HEAD
 					ExternalCommandPipe.rescheduleService(DIMS.getInstance().getCurrentHostName(), DIMS.getInstance().getCurrentServiceName(), strTime);
+=======
+					ExternalCommandPipe.rescheduleService(DIMS.getInstance().getCurrentHostName(), DIMS.getInstance().getCurrentServiceName(), myTime.getTime());
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 					
 					UpdateData.updateServiceSchedule(DIMS.getInstance().getCurrentOID(), WantedDate);
 					DIMS myApp = DIMS.getInstance();

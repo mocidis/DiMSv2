@@ -14,6 +14,7 @@ import javax.swing.JPasswordField;
 
 import events.ActionChangePass;
 import utils.ColorBG;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
 
 public class PanelChangePass extends JPanel {
@@ -22,6 +23,15 @@ public class PanelChangePass extends JPanel {
 	private int titleSize = (int)(0.012*ScreenSpecification.MONITOR_WIDTH);
 	private int field_width = (int)(0.015*ScreenSpecification.MONITOR_WIDTH);
 	private int submit_width = (int)(0.066*ScreenSpecification.MONITOR_WIDTH);
+=======
+
+public class PanelChangePass extends JPanel {
+	private ActionChangePass listener = new ActionChangePass();
+	private Dimension box = new Dimension(600, 600);
+	private int titleSize = 16;
+	private int field_width = 20;
+	private int submit_width = 90;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 	public PanelChangePass(){
 		this.setLayout(new BorderLayout());
 		this.setBackground(Color.decode(ColorBG.BACKGROUND));

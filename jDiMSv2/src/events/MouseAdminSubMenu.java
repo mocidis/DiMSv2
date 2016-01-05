@@ -16,7 +16,11 @@ import gui.PanelMainContent;
 import gui.PanelTopLogin;
 import utils.ColorBG;
 import utils.DIMS;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
+=======
+import utils.ScreenIndex;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 import utils.TextLabelStyle;
 
 public class MouseAdminSubMenu implements MouseListener{
@@ -31,7 +35,11 @@ public class MouseAdminSubMenu implements MouseListener{
 		JLabel now = (JLabel)e.getSource();
 		try{
 			if(now.getName().equals("changepassword")){
+<<<<<<< HEAD
 				PanelMainContent newCenter = new PanelMainContent(ScreenSpecification.CHANGEPASSWORD);
+=======
+				PanelMainContent newCenter = new PanelMainContent(ScreenIndex.CHANGEPASSWORD);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 				DIMS.getInstance().getCenterMain().reloadCenter(newCenter);
 				changePass.setBackground(Color.decode(ColorBG.BACKGROUND));
 			}

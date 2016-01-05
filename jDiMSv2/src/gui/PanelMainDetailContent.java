@@ -11,7 +11,11 @@ import utils.DIMS;
 import utils.IsHost;
 import utils.IsService;
 import utils.IsServiceGroup;
+<<<<<<< HEAD
 import utils.ScreenSpecification;
+=======
+import utils.ScreenIndex;
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 import utils.ShowHostPage;
 import utils.ShowServiceInGroup;
 import utils.ShowServicePage;
@@ -36,9 +40,15 @@ public class PanelMainDetailContent extends JPanel {
 		}
 		else{
 			PanelCenterMain CenterMain = DIMS.getInstance().getCenterMain();
+<<<<<<< HEAD
 			PanelMainContent newCenter = new PanelMainContent(ScreenSpecification.MATRIX);
 			CenterMain.reloadCenter(newCenter);
 			DIMS.getInstance().setCurrentObjectID(ScreenSpecification.MATRIX);
+=======
+			PanelMainContent newCenter = new PanelMainContent(ScreenIndex.MATRIX);
+			CenterMain.reloadCenter(newCenter);
+			DIMS.getInstance().setCurrentObjectID(ScreenIndex.MATRIX);
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 		}
 	}
 	

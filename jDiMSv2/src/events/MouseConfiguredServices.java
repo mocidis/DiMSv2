@@ -25,7 +25,11 @@ public class MouseConfiguredServices implements MouseListener{
 			if(IsServiceGroup.check(String.valueOf(DIMS.getInstance().getCurrentOID()))){
 				if(Integer.parseInt(now.getText()) > 0 ){
 						DIMS.getInstance().setState(Integer.parseInt(now.getName()));
+<<<<<<< HEAD
 						ShowServiceByStateInGroup newCenter = new ShowServiceByStateInGroup(now.getName(), now.getText());
+=======
+						ShowServiceByStateInGroup newCenter = new ShowServiceByStateInGroup();
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 						DIMS.getInstance().getDetailContent().reloadContent(newCenter);
 				}
 			}
@@ -33,7 +37,11 @@ public class MouseConfiguredServices implements MouseListener{
 				if(Integer.parseInt(now.getText()) > 0 ){
 					try {
 						DIMS.getInstance().setState(Integer.parseInt(now.getName()));
+<<<<<<< HEAD
 						ShowServiceByStateInHost newCenter = new ShowServiceByStateInHost(now.getName(), now.getText());
+=======
+						ShowServiceByStateInHost newCenter = new ShowServiceByStateInHost();
+>>>>>>> 59b111e4ac1414d99c263946f0e194a1f2a8593d
 						DIMS.getInstance().getDetailContent().reloadContent(newCenter);
 					} catch (SQLException e1) {
 						// TODO Auto-generated catch block
