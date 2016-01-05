@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project name="DiMSv2" basedir="." default="build-jar">
+	<property name="src.dir" value="src"/>
+	<property name="lib.dir" value="library"/>
+	<property name="build.dir" value="classes"/>
+	<property name="parent.dir" value="../"/>
+	
+	<path id="library">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar"/>
+		</fileset>
+		<pathelement path="${build.dir}"/>
+	</path>
+	<target name="build">
+		<mkdir dir="${build.dir}"/>
+		<javac destdir="${build.dir}" source="1.8.0_65" target="1.8.0_65" deprecation="false" optimize="false" failonerror="true">
+			<src path="${src.dir}"/>
+			<classpath refid="library"/>
+		</javac>
+	</target>
+
+	<target name="build-jar" depends="build">
+		<jar destfile="../jDiMS.jar">
+			<fileset dir="${build.dir}"/>
+			<manifest>
+				<attribute name="Main-Class" value="utils.Main"/>
+				<attribute name="Class-Path" value="."/>
+			</manifest>
+            <zipfileset excludes="META-INF/*.SF" src="${lib.dir}/jxlayer-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${lib.dir}/mysql-connector-java-5.1.36.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${lib.dir}/swingx-all-1.6.3.jar"/>
+		 	<zipfileset excludes="META-INF/*.SF" src="${lib.dir}/postgresql-9.4-1205.jdbc4"/>
+		</jar>
+	</target>
+	<target name="clean">
+		<delete>
+			<fileset dir="${build.dir}">
+				<include name="**/*.class"/>
+			</fileset>
+			<fileset dir="${parent.dir}">
+				<include name="jDiMS.jar"/>
+			</fileset>
+      		</delete>
+	</target>
+</project>
